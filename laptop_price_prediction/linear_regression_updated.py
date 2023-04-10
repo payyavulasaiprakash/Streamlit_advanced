@@ -9,8 +9,12 @@ import os, ntpath
 
 
 def lr_model_training():
+    file_dir,_=ntpath.split(os.path.abspath(__file__))
+    image_file_dir=os.path.join(file_dir,'resources')
+    image_file_path = os.path.join(image_file_dir, "images", "laptop.jpg")
+    dataset_file_path = os.path.join(image_file_dir, "data", "laptop_details_copy.csv")
 
-    df= pd.read_csv('./resources/data/laptop_details_copy.csv')
+    df= pd.read_csv(dataset_file_path)
 
     features=df.drop(columns=['Feature','Product','MRP','processor_gen'])
 
