@@ -6,14 +6,11 @@ from sklearn.impute import SimpleImputer
 import numpy as np
 import pickle
 import os, ntpath
-file_dir,_=ntpath.split((os.path.abspath(__file__)))
-image_file_dir=os.path.join(os.path.dirname(file_dir),'resources')
-image_file_path = os.path.join(image_file_dir, "images", "laptop.jpg")
-dataset_file_path = os.path.join(image_file_dir, "data", "laptop_details_copy.csv")
+
 
 def lr_model_training():
 
-    df= pd.read_csv(dataset_file_path)
+    df= pd.read_csv('./resources/data/laptop_details_copy.csv')
 
     features=df.drop(columns=['Feature','Product','MRP','processor_gen'])
 
