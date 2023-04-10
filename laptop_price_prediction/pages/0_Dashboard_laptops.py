@@ -18,8 +18,11 @@ st.title("Dashboard - Laptop dataset analysis")
 
 file_dir,_=ntpath.split((os.path.abspath(__file__)))
 image_file_dir=os.path.join(os.path.dirname(file_dir),'resources')
+print(image_file_dir)
 image_file_path = os.path.join(image_file_dir, "images", "laptop.jpg")
+print(image_file_path)
 dataset_file_path = os.path.join(image_file_dir, "data", "laptop_details_copy.csv")
+print(dataset_file_path)
 # model_path=os.path.join(os.path.dirname(file_dir),'finalized_linear_regression_model.sav')
 
 st.subheader("Sample image of Laptop")
